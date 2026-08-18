@@ -1,0 +1,34 @@
+paths:
+  transformation_bin: /workspace/agentic-robustness-experiment/dependencies/semantic_preserving_transformer/semantic_transformer.cli
+  seed_storage: /workspace/agentic-robustness-experiment/seed_storage
+  transformed_storage: /workspace/agentic-robustness-experiment/transformed_storage
+agent_config:
+  agent_scaffold: miniswe
+  agent_executable: /workspace/agentic-robustness-experiment/dependencies/mini-swe-agent/src/minisweagent/run/extra/swebench.py
+  agent_swebench_config: /workspace/agentic-robustness-experiment/config/swebench.yaml
+  swebench_pro_config: /workspace/agentic-robustness-experiment/config/swepro.yaml
+  agent_trace_dir: /workspace/agentic-robustness-experiment/traces
+swebench_config:
+  swebench_directory: /workspace/agentic-robustness-experiment/dependencies/swebench
+  swebench_executable: /workspace/agentic-robustness-experiment/dependencies/swebench/swebench.harness.run_evaluation
+swebench_pro_eval_config:
+  eval_script: swebench_pro_evaluation/swe_bench_pro_eval.py
+  raw_sample_path: swebench_pro_evaluation/sweap_eval_full_v2.jsonl
+  scripts_dir: swebench_pro_evaluation/run_scripts/
+  dockerhub_username: jefzda
+environment:
+  container_cwd: /testbed
+  swepro_container_cwd: /app
+  timeout: 120
+spt_config:
+  num_transformations: 3
+  fraction_of_candidates_to_transform: 0.7
+  max_files_for_injection_spts: 10
+  max_keywords_for_task_specific_spts: 5
+  mutant_id_length: 12
+llm_config:
+  provider: openai
+  model: Qwen/Qwen3.6-27B
+  base_url: http://localhost:8003/v1/
+  api_key: ''
+  region: us-east-1

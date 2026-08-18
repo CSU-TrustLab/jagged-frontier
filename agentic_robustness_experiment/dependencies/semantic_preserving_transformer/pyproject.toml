@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic-transformer"
+version = "0.1.0"
+description = "A library of semantic-preserving Python source-to-source transformations"
+authors = [{ name = "Anonymous Author", email = "anonymous@example.com" }]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "libcst>=1.8.5",
+    "nltk>=3.6.0",
+    "pytest>=6.0",
+    "evalplus>=0.3.1",
+    "jedi>=0.19.2",
+    "astroid>=3.3.0",
+    "pytest>=8.4.2",
+    "numpy>=2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [ "semantic_transformer", "tests"]
+exclude = ["temp*"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"**/__init__.py" = ["F401"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

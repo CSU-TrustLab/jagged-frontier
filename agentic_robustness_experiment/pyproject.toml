@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-robustness-experiment"
+version = "0.1.0"
+description = "A framework to discover semantic-preserving transformations that mislead AI code agents."
+authors = [
+    { name = "Anonymous Author", email = "anonymous@example.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+dependencies = [
+"anthropic>=0.40.0",
+"openai>=1.0.0",
+"datasets>=3.0.0",
+"docker>=7.1.0",
+"numpy>2.2.0",
+"pyyaml>=6.0"
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

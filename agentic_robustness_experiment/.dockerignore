@@ -1,0 +1,17 @@
+.git
+.gitignore
+dependencies/
+traces/
+sampled_trajectories/
+extracted_trajectories/
+seed_storage/
+transformed_storage/
+*.traj.json
+bulk_experiment_report*.json
+iterative_search_history_*.json
+iterative_search_report_*.md
+location_hint_testing_v1/
+swebench_pro_evaluation/
+__pycache__/
+*.pyc
+.pytest_cache/

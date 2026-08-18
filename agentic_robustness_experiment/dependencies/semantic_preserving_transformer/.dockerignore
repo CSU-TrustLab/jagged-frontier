@@ -1,0 +1,14 @@
+.git
+.gitignore
+.venv
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+*.log
+Results/
+data_flow_analysis/repo_databases/
+humaneval*.json
+mbpp*.json
+*.egg-info/
