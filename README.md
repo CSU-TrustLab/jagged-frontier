@@ -1,11 +1,27 @@
 # Agent Robustness Evaluation of Code Agents — Artifact
 
-It has three parts: one that **runs** the robustness experiments, one that **analyzes** the agent
-trajectories those experiments produce, and one that **visualizes** the
+It has three parts: one that **runs** the robustness experiments, and one that **visualizes** the
 aggregate results.
 
 ---
-## [Dashboard/](Dashboard/)
+
+## [agentic_robustness_experiment](agentic_robustness_experiment/)
+
+Measures how robust coding agents are to **semantic-preserving transformations
+(SPTs)** — rewrites of a repository's source that cannot change its behaviour.
+For each SWE-bench / SWE-Bench-Pro task it extracts the seed source, generates N
+mutants, runs the agent on each in a fresh container, and grades the result with
+the standard harness. Every mutation is logged with file and line positions.
+
+Bundled under `dependencies/`: the SPT library, the mini-swe-agent scaffold, and
+the SWE-bench evaluator — so setup needs no external repository access.
+
+Requires Linux, Docker, Python 3.10+, and an LLM endpoint (hosted or local).
+Full setup and model configuration are in
+[agentic_robustness_experiment/README.md](agentic_robustness_experiment/README.md).
+
+---
+## [Dashboard](Dashboard/)
 
 A single self-contained HTML page,
 [dashboard.html](Dashboard/dashboard.html), for exploring the pooled
@@ -38,22 +54,7 @@ from a CDN, so the first load needs network access.
 
 ---
 
-## [agentic_robustness_experiment/](agentic_robustness_experiment/)
-
-Measures how robust coding agents are to **semantic-preserving transformations
-(SPTs)** — rewrites of a repository's source that cannot change its behaviour.
-For each SWE-bench / SWE-Bench-Pro task it extracts the seed source, generates N
-mutants, runs the agent on each in a fresh container, and grades the result with
-the standard harness. Every mutation is logged with file and line positions.
-
-Bundled under `dependencies/`: the SPT library, the mini-swe-agent scaffold, and
-the SWE-bench evaluator — so setup needs no external repository access.
-
-Requires Linux, Docker, Python 3.10+, and an LLM endpoint (hosted or local).
-Full setup and model configuration are in
-[agentic_robustness_experiment/README.md](agentic_robustness_experiment/README.md).
-
----
+<!-- ---
 
 ## [trajectory-analysis/](trajectory-analysis/)
 
@@ -67,6 +68,6 @@ quality metadata. Batch runs also emit `index.html`, `summary.json`, and
 
 
 Details, input layout rules, credentials, and troubleshooting are in
-[trajectory-analysis/README.md](trajectory-analysis/README.md).
+[trajectory-analysis/README.md](trajectory-analysis/README.md). -->
 
 ---
