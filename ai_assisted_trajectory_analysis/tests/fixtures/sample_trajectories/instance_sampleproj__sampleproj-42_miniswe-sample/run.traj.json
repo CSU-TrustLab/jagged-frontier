@@ -1,0 +1,18 @@
+{
+  "trajectory_format": "mini-swe-agent-1",
+  "instance_id": "sampleproj__sampleproj-42",
+  "info": {
+    "config": {"model": {"model_name": "fake-model"}},
+    "model_stats": {"instance_cost": 0, "api_calls": 0},
+    "exit_status": "Submitted",
+    "submission": "diff --git a/sampleproj/parser.py b/sampleproj/parser.py\n--- a/sampleproj/parser.py\n+++ b/sampleproj/parser.py\n-old\n+new"
+  },
+  "messages": [
+    {"role": "system", "content": "Synthetic test fixture."},
+    {"role": "user", "content": "<pr_description>Fix truncated input handling in sampleproj/parser.py. The parser should return a partial record instead of raising an error.</pr_description>"},
+    {"role": "assistant", "content": "Let me start by inspecting sampleproj/parser.py."},
+    {"role": "assistant", "content": "I found the parser entry point."},
+    {"role": "assistant", "content": "I will apply a focused fix."},
+    {"role": "assistant", "content": "The change is ready for validation."}
+  ]
+}

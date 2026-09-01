@@ -1,0 +1,9 @@
+{
+  "sampleproj__sampleproj-42": {
+    "resolved": true,
+    "patch_successfully_applied": true,
+    "tests_status": {
+      "FAIL_TO_PASS": {"success": ["test_truncated_input"], "failure": []}
+    }
+  }
+}

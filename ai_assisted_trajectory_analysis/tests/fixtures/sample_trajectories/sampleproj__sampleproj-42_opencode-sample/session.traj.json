@@ -1,0 +1,32 @@
+{
+  "info": {
+    "id": "synthetic-session",
+    "issue_description": "Fix truncated input handling in sampleproj/parser.py. The parser should return a partial record instead of raising an error.",
+    "model": {"id": "fake-model", "providerID": "test"},
+    "cost": 0
+  },
+  "messages": [
+    {
+      "info": {"role": "user"},
+      "parts": [{"type": "text", "text": "Please fix the parser behavior."}]
+    },
+    {
+      "info": {"role": "assistant"},
+      "parts": [{"type": "text", "text": "I'll start by locating the parser."}]
+    },
+    {
+      "info": {"role": "assistant"},
+      "parts": [
+        {
+          "type": "tool",
+          "tool": "bash",
+          "state": {
+            "status": "completed",
+            "input": {"command": "sed -n '1,120p' sampleproj/parser.py"},
+            "output": "def parse_stream(data): ..."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Core
+python-dotenv>=1.0.0
+pyyaml>=6.0
+
+# LLM APIs
+boto3>=1.34.0
+litellm>=1.40.0
