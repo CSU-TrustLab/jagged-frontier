@@ -1,0 +1,93 @@
+# ==========================
+# Python
+# ==========================
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.*
+*.py,cover
+
+# Virtual environments
+venv/
+.env/
+env/
+trajectory-analysis/
+
+# ==========================
+# Environment variables
+# ==========================
+
+.env
+.env.*
+*.env
+
+# ==========================
+# Jupyter
+# ==========================
+
+.ipynb_checkpoints/
+
+# ==========================
+# VS Code
+# ==========================
+
+.vscode/
+.history/
+
+# ==========================
+# OS files
+# ==========================
+
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Logs
+# ==========================
+
+logs/
+*.log
+error_log.txt
+
+# ==========================
+# Generated outputs
+# ==========================
+
+outputs/
+*.pt
+*.png
+*.mmd
+*_graph.png
+*_condensed.json
+*_condensed.md
+
+# ==========================
+# Large datasets
+# ==========================
+
+datasets/
+*.jsonl
+*.jsonl.gz
+
+# Trajectory analysis input data (large; not tracked in git)
+ai_assisted_data/
+
+# ==========================
+# Temporary files
+# ==========================
+
+tmp/
+temp/
+*.tmp
+
+# Extracted manual-evaluation findings are retained instead.
+manual_evaluation_findings/*.zip
+
+# ==========================
+# Model artifacts
+# ==========================
+
+checkpoints/
+models/
